@@ -1,0 +1,16 @@
+{
+  "alternatives": [
+    {
+      "kind": "NATURAL_COURSE",
+      "description": "皮肤状态存在季节性波动，12 周观察窗可能跨越改善期",
+      "evidenceRefs": []
+    },
+    {
+      "kind": "CONFOUNDING",
+      "description": "参与试验者可能同时改变了防晒与作息习惯，与干预效应混淆",
+      "evidenceRefs": ["PMID:30000001"]
+    }
+  ],
+  "conclusion": "ALTERNATIVES_IDENTIFIED",
+  "rationale": "两项替代解释均可在不假设干预有效的前提下解释观察到的改善；其中混杂解释引用了确证式检索条目，需进一步核对基线特征平衡性。"
+}

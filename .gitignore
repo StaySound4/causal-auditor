@@ -1,0 +1,77 @@
+# ==============================================================================
+# causal-auditor - paths that must never reach the repository
+#
+# Rule of thumb: if a file is generated, machine-specific, secret-bearing, or
+# large/binary, it does not belong in git history. History is permanent; a leaked
+# credential stays in forks and caches even after the file is deleted.
+#
+# NOTE: .gitignore only affects UNTRACKED files. To stop tracking a file that is
+# already committed, use: git rm --cached <path>
+# ==============================================================================
+
+# --- Dependencies -------------------------------------------------------------
+node_modules/
+
+# --- Build / packaging artifacts ---------------------------------------------
+dist/
+build/
+out/
+coverage/
+.nyc_output/
+*.tgz
+*.tsbuildinfo
+
+# --- Secrets and local configuration (irreversible if leaked) -----------------
+.env
+.env.*
+!.env.example
+*.local
+.npmrc
+.pypirc
+
+# --- Editors / IDEs -----------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+.history/
+
+# --- Operating system ---------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# --- Logs, caches, temp -------------------------------------------------------
+*.log
+npm-debug.log*
+tmp/
+.cache/
+
+# --- AI / CLI tool state ------------------------------------------------------
+# Runtime artifacts and machine-local settings only; project-shipped agent
+# definitions (for example .pi/agents/) stay committable on purpose.
+.pi/subagents/
+.pi/generated-images/
+.pi/settings.json
+.claude/settings.local.json
+.codex/
+.cursor/
+.omp/
+.agents/
+
+# --- Scratch workspace (specs, tickets, run artifacts) ------------------------
+.scratch/
+
+# --- Local AI collaboration scaffolding (deliberately not published) ----------
+# Reversible: delete these three lines to publish them again.
+AGENTS.md
+CONTEXT.md
+docs/agents/
+
+# --- Large binaries (git cannot reclaim them) ---------------------------------
+*.pdf
+*.zip
+
+# --- Raw research material (third-party copyright) ----------------------------
+因果/

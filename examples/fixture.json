@@ -1,0 +1,34 @@
+{
+  "confirmatory": [
+    {
+      "source": "PUBMED",
+      "identifier": "PMID:30000001",
+      "title": "口服胶原蛋白肽对皮肤弹性的随机双盲对照试验",
+      "year": 2023,
+      "studyType": "RCT",
+      "sampleSize": 120,
+      "direction": "SUPPORTS",
+      "keyFindings": "12 周后干预组皮肤弹性较安慰剂组改善",
+      "peerReviewed": true
+    }
+  ],
+  "falsification": [
+    {
+      "source": "PUBMED",
+      "identifier": "PMID:30000002",
+      "title": "胶原蛋白肽口服后的消化道水解与吸收研究",
+      "year": 2022,
+      "studyType": "COHORT",
+      "direction": "REFUTES",
+      "keyFindings": "大部分肽段在消化道被水解为游离氨基酸，原型肽入血量低",
+      "peerReviewed": true
+    },
+    {
+      "source": "WEB",
+      "identifier": "",
+      "title": "某自媒体带货文章（缺少可核验标识）",
+      "keyFindings": "声称效果显著但无出处",
+      "peerReviewed": false
+    }
+  ]
+}

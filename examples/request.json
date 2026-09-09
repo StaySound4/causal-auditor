@@ -1,0 +1,25 @@
+{
+  "claim": {
+    "rawClaim": "口服胶原蛋白肽改善皮肤弹性",
+    "domain": "NUTRITIONAL",
+    "exposure": {
+      "name": "胶原蛋白肽",
+      "route": "ORAL",
+      "dose": { "amount": 5000, "unit": "mg", "frequency": "每日一次" }
+    },
+    "outcome": { "name": "皮肤弹性", "metricType": "VALIDATED_INSTRUMENT" },
+    "population": { "description": "健康成年女性" },
+    "comparison": "安慰剂",
+    "timeframe": "12 周"
+  },
+  "dag": {
+    "nodes": ["X", "Z", "Y"],
+    "edges": [["Z", "X"], ["Z", "Y"], ["X", "Y"]]
+  },
+  "adjustmentSet": ["Z"],
+  "design": {
+    "studyType": "RCT",
+    "randomized": true,
+    "blinded": true
+  }
+}
